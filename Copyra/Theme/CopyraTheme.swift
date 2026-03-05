@@ -7,41 +7,41 @@ enum CopyraTheme {
 
   enum Colors {
     // Surfaces — layered depth on dark vibrancy backdrop
-    static let surfaceOverlay = Color.white.opacity(0.04)
-    static let surfaceElevated = Color.white.opacity(0.07)
-    static let surfaceCard = Color.white.opacity(0.05)
+    static let surfaceOverlay = Color.white.opacity(0.06)
+    static let surfaceElevated = Color.white.opacity(0.12)
+    static let surfaceCard = Color.white.opacity(0.08)
 
     // Text
     static let textPrimary = Color.white.opacity(0.92)
-    static let textSecondary = Color.white.opacity(0.55)
-    static let textMuted = Color.white.opacity(0.35)
+    static let textSecondary = Color.white.opacity(0.60)
+    static let textMuted = Color.white.opacity(0.40)
 
     // Accent — cool blue with depth
-    static let accent = Color(red: 0.35, green: 0.55, blue: 1.0)
-    static let accentSubtle = Color(red: 0.35, green: 0.55, blue: 1.0).opacity(0.25)
+    static let accent = Color(red: 0.40, green: 0.60, blue: 1.0)
+    static let accentSubtle = Color(red: 0.40, green: 0.60, blue: 1.0).opacity(0.25)
 
     // Selection / State
-    static let selected = Color(red: 0.30, green: 0.50, blue: 0.95).opacity(0.75)
+    static let selected = Color(red: 0.30, green: 0.50, blue: 0.95).opacity(0.80)
     static let selectedText = Color.white.opacity(0.97)
-    static let hover = Color.white.opacity(0.06)
-    static let active = Color.white.opacity(0.10)
-    static let focus = Color(red: 0.35, green: 0.55, blue: 1.0).opacity(0.50)
+    static let hover = Color.white.opacity(0.08)
+    static let active = Color.white.opacity(0.12)
+    static let focus = Color(red: 0.40, green: 0.60, blue: 1.0).opacity(0.50)
 
     // Border / Divider
-    static let border = Color.white.opacity(0.10)
-    static let borderSubtle = Color.white.opacity(0.05)
-    static let divider = Color.white.opacity(0.08)
+    static let border = Color.white.opacity(0.14)
+    static let borderSubtle = Color.white.opacity(0.08)
+    static let divider = Color.white.opacity(0.12)
 
     // Semantic
     static let pinned = Color(red: 1.0, green: 0.78, blue: 0.28).opacity(0.85)
     static let warning = Color(red: 1.0, green: 0.72, blue: 0.30)
 
     // Badges / Indicators
-    static let badge = Color.white.opacity(0.15)
-    static let badgeText = Color.white.opacity(0.85)
+    static let badge = Color.white.opacity(0.18)
+    static let badgeText = Color.white.opacity(0.90)
 
     // Placeholder / empty state
-    static let placeholder = Color.white.opacity(0.08)
+    static let placeholder = Color.white.opacity(0.10)
   }
 
   // MARK: - Spacing

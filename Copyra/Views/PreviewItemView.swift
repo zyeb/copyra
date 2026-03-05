@@ -59,48 +59,59 @@ struct PreviewItemView: View {
 
       Spacer(minLength: 0)
 
-      ThemedDivider()
-        .padding(.vertical)
+      Spacer(minLength: CopyraTheme.Spacing.md)
 
-      if let application = item.application {
+      VStack(alignment: .leading, spacing: CopyraTheme.Spacing.xs) {
+        if let application = item.application {
+          HStack(spacing: 3) {
+            Text("Application", tableName: "PreviewItemView")
+              .foregroundStyle(CopyraTheme.Colors.textMuted)
+            AppImageView(
+              appImage: item.applicationImage,
+              size: NSSize(width: 11, height: 11)
+            )
+            Text(application)
+              .foregroundStyle(CopyraTheme.Colors.textSecondary)
+          }
+        }
+
         HStack(spacing: 3) {
-          Text("Application", tableName: "PreviewItemView")
+          Text("FirstCopyTime", tableName: "PreviewItemView")
             .foregroundStyle(CopyraTheme.Colors.textMuted)
-          AppImageView(
-            appImage: item.applicationImage,
-            size: NSSize(width: 11, height: 11)
-          )
-          Text(application)
+          Text(item.item.firstCopiedAt, style: .date)
+            .foregroundStyle(CopyraTheme.Colors.textSecondary)
+          Text(item.item.firstCopiedAt, style: .time)
+            .foregroundStyle(CopyraTheme.Colors.textSecondary)
+        }
+
+        HStack(spacing: 3) {
+          Text("LastCopyTime", tableName: "PreviewItemView")
+            .foregroundStyle(CopyraTheme.Colors.textMuted)
+          Text(item.item.lastCopiedAt, style: .date)
+            .foregroundStyle(CopyraTheme.Colors.textSecondary)
+          Text(item.item.lastCopiedAt, style: .time)
+            .foregroundStyle(CopyraTheme.Colors.textSecondary)
+        }
+
+        HStack(spacing: 3) {
+          Text("NumberOfCopies", tableName: "PreviewItemView")
+            .foregroundStyle(CopyraTheme.Colors.textMuted)
+          Text(String(item.item.numberOfCopies))
             .foregroundStyle(CopyraTheme.Colors.textSecondary)
         }
       }
-
-      HStack(spacing: 3) {
-        Text("FirstCopyTime", tableName: "PreviewItemView")
-          .foregroundStyle(CopyraTheme.Colors.textMuted)
-        Text(item.item.firstCopiedAt, style: .date)
-          .foregroundStyle(CopyraTheme.Colors.textSecondary)
-        Text(item.item.firstCopiedAt, style: .time)
-          .foregroundStyle(CopyraTheme.Colors.textSecondary)
-      }
-
-      HStack(spacing: 3) {
-        Text("LastCopyTime", tableName: "PreviewItemView")
-          .foregroundStyle(CopyraTheme.Colors.textMuted)
-        Text(item.item.lastCopiedAt, style: .date)
-          .foregroundStyle(CopyraTheme.Colors.textSecondary)
-        Text(item.item.lastCopiedAt, style: .time)
-          .foregroundStyle(CopyraTheme.Colors.textSecondary)
-      }
-
-      HStack(spacing: 3) {
-        Text("NumberOfCopies", tableName: "PreviewItemView")
-          .foregroundStyle(CopyraTheme.Colors.textMuted)
-        Text(String(item.item.numberOfCopies))
-          .foregroundStyle(CopyraTheme.Colors.textSecondary)
-      }
+      .font(CopyraTheme.Typography.metadata)
+      .padding(CopyraTheme.Spacing.md)
+      .frame(maxWidth: .infinity, alignment: .leading)
+      .background(
+        RoundedRectangle(cornerRadius: CopyraTheme.Radius.md, style: .continuous)
+          .fill(CopyraTheme.Colors.surfaceCard)
+          .overlay(
+            RoundedRectangle(cornerRadius: CopyraTheme.Radius.md, style: .continuous)
+              .strokeBorder(CopyraTheme.Colors.borderSubtle, lineWidth: 0.5)
+          )
+      )
     }
-    .font(CopyraTheme.Typography.metadata)
     .controlSize(.small)
   }
 }

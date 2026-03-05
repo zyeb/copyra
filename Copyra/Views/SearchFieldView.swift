@@ -12,9 +12,9 @@ struct SearchFieldView: View {
         .fill(CopyraTheme.Colors.surfaceElevated)
         .overlay(
           RoundedRectangle(cornerRadius: CopyraTheme.Radius.md, style: .continuous)
-            .strokeBorder(CopyraTheme.Colors.borderSubtle, lineWidth: 0.5)
+            .strokeBorder(CopyraTheme.Colors.border, lineWidth: 0.5)
         )
-        .frame(height: 23)
+        .frame(height: 26)
 
       HStack {
         Image(systemName: "magnifyingglass")
