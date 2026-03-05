@@ -4,8 +4,9 @@ struct SlideoutContentView: View {
   @Environment(AppState.self) var appState
 
   var body: some View {
-    VStack {
+    VStack(spacing: 0) {
       ToolbarView()
+        .padding(.bottom, CopyraTheme.Spacing.sm)
 
       if let item = appState.navigator.leadHistoryItem {
         PreviewItemView(item: item)
@@ -19,6 +20,7 @@ struct SlideoutContentView: View {
     .padding(.horizontal)
     .padding(.bottom)
     .padding(.top, Popup.verticalPadding)
+    .background(CopyraTheme.Colors.surfaceOverlay)
   }
 
 }

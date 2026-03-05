@@ -48,11 +48,12 @@ where Content: View, Slideout: View {
 
   @ViewBuilder
   private func resizeDivider() -> some View {
-    ThemedDivider()
-      .padding(.vertical)
-      .padding(.horizontal, Popup.horizontalPadding)
+    Rectangle()
+      .fill(CopyraTheme.Colors.divider)
+      .frame(width: 1)
+      .padding(.vertical, CopyraTheme.Spacing.md)
       // macOS 26 broke gestures if no background is present.
-      // The slight opcaity white background is a workaround
+      // The slight opacity white background is a workaround
       .background(Color.white.opacity(0.001))
       .onHover(perform: { inside in
         if let window = appState.appDelegate?.panel {
