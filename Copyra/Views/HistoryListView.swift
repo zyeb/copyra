@@ -49,21 +49,21 @@ struct HistoryListView: View {
   }
 
   private func topSeparator() -> some View {
-    Divider()
+    ThemedDivider()
       .padding(.horizontal, Popup.horizontalSeparatorPadding)
       .padding(.top, Popup.verticalSeparatorPadding)
   }
 
   @ViewBuilder
   private func bottomSeparator() -> some View {
-    Divider()
+    ThemedDivider()
       .padding(.horizontal, Popup.horizontalSeparatorPadding)
       .padding(.bottom, Popup.verticalSeparatorPadding)
   }
 
   @ViewBuilder
   private func separator() -> some View {
-    Divider()
+    ThemedDivider()
       .padding(.horizontal, Popup.horizontalSeparatorPadding)
       .padding(.vertical, Popup.verticalSeparatorPadding)
   }
@@ -107,8 +107,8 @@ struct HistoryListView: View {
               }
             }
             .buttonStyle(.plain)
-            .font(.caption)
-            .foregroundStyle(.secondary)
+            .font(CopyraTheme.Typography.caption)
+            .foregroundStyle(CopyraTheme.Colors.accent)
             .padding(.vertical, 8)
           }
 
@@ -123,8 +123,8 @@ struct HistoryListView: View {
               }
             }
             .buttonStyle(.plain)
-            .font(.caption)
-            .foregroundStyle(.secondary)
+            .font(CopyraTheme.Typography.caption)
+            .foregroundStyle(CopyraTheme.Colors.accent)
             .padding(.vertical, 8)
           }
 
@@ -133,8 +133,8 @@ struct HistoryListView: View {
             let start = total > 0 ? (appState.history.pagedWindowStartIndex + 1) : 0
             let end = total > 0 ? min(appState.history.pagedWindowEndIndex, total) : 0
             Text("Showing \(start)-\(end) of \(total)")
-              .font(.caption2)
-              .foregroundStyle(.secondary)
+              .font(CopyraTheme.Typography.caption)
+              .foregroundStyle(CopyraTheme.Colors.textMuted)
               .padding(.bottom, 8)
           }
         }

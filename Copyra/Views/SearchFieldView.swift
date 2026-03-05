@@ -8,21 +8,25 @@ struct SearchFieldView: View {
 
   var body: some View {
     ZStack {
-      RoundedRectangle(cornerRadius: Popup.cornerRadius, style: .continuous)
-        .fill(Color.secondary)
-        .opacity(0.1)
+      RoundedRectangle(cornerRadius: CopyraTheme.Radius.md, style: .continuous)
+        .fill(CopyraTheme.Colors.surfaceElevated)
+        .overlay(
+          RoundedRectangle(cornerRadius: CopyraTheme.Radius.md, style: .continuous)
+            .strokeBorder(CopyraTheme.Colors.borderSubtle, lineWidth: 0.5)
+        )
         .frame(height: 23)
 
       HStack {
         Image(systemName: "magnifyingglass")
           .frame(width: 11, height: 11)
           .padding(.leading, 5)
-          .opacity(0.8)
+          .foregroundStyle(CopyraTheme.Colors.textMuted)
 
         TextField(placeholder, text: $query)
           .disableAutocorrection(true)
           .lineLimit(1)
           .textFieldStyle(.plain)
+          .foregroundStyle(CopyraTheme.Colors.textPrimary)
           .onSubmit {
             appState.select()
           }
@@ -36,7 +40,7 @@ struct SearchFieldView: View {
               .padding(.trailing, 5)
           }
           .buttonStyle(.plain)
-          .opacity(0.9)
+          .foregroundStyle(CopyraTheme.Colors.textSecondary)
         }
       }
     }

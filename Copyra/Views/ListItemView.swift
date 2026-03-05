@@ -83,14 +83,14 @@ struct ListItemView<Title: View, ID: Hashable>: View {
       HStack(spacing: 5) {
         if let index = selectionIndex {
           Text("\(index + 1)")
-            .font(.caption)
+            .font(CopyraTheme.Typography.captionMedium)
             .frame(minWidth: 10, alignment: .center)
             .padding(3)
             .background(
-              Color.secondary.opacity(isSelected ? 0.5 : 0.8),
+              CopyraTheme.Colors.badge,
               in: Capsule()
             )
-            .foregroundStyle(Color.white)
+            .foregroundStyle(CopyraTheme.Colors.badgeText)
         }
 
         if !shortcuts.isEmpty {
@@ -109,10 +109,10 @@ struct ListItemView<Title: View, ID: Hashable>: View {
     .frame(minHeight: Popup.itemHeight)
     .id(id)
     .frame(maxWidth: .infinity, alignment: .leading)
-    .foregroundStyle(isSelected ? Color.white : .primary)
+    .foregroundStyle(isSelected ? CopyraTheme.Colors.selectedText : CopyraTheme.Colors.textPrimary)
     // macOS 26 broke hovering if no background is present.
-    // The slight opcaity white background is a workaround
-    .background(isSelected ? Color.accentColor.opacity(0.8) : .white.opacity(0.001))
+    // The slight opacity white background is a workaround
+    .background(isSelected ? CopyraTheme.Colors.selected : .white.opacity(0.001))
     .clipShape(selectionAppearance.rect(cornerRadius: Popup.cornerRadius))
     .hoverSelectionId(selectionId)
     .help(help ?? "")

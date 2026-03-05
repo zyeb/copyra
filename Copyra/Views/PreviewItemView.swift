@@ -25,7 +25,7 @@ struct PreviewItemView: View {
           } else {
             previewImage {
               ZStack {
-                Color.gray.opacity(0.3)
+                CopyraTheme.Colors.placeholder
                   .frame(
                     idealWidth: HistoryItemDecorator.previewImageSize.width,
                     idealHeight: HistoryItemDecorator.previewImageSize.height
@@ -39,7 +39,7 @@ struct PreviewItemView: View {
         } placeholder: {
           previewImage {
             ZStack {
-              Color.gray.opacity(0.3)
+              CopyraTheme.Colors.placeholder
                 .frame(
                   idealWidth: HistoryItemDecorator.previewImageSize.width,
                   idealHeight: HistoryItemDecorator.previewImageSize.height
@@ -52,43 +52,55 @@ struct PreviewItemView: View {
       } else {
         ScrollView {
           Text(item.text)
-            .font(.body)
+            .font(CopyraTheme.Typography.body)
+            .foregroundStyle(CopyraTheme.Colors.textPrimary)
         }
       }
 
       Spacer(minLength: 0)
 
-      Divider()
+      ThemedDivider()
         .padding(.vertical)
 
       if let application = item.application {
         HStack(spacing: 3) {
           Text("Application", tableName: "PreviewItemView")
+            .foregroundStyle(CopyraTheme.Colors.textMuted)
           AppImageView(
             appImage: item.applicationImage,
             size: NSSize(width: 11, height: 11)
           )
           Text(application)
+            .foregroundStyle(CopyraTheme.Colors.textSecondary)
         }
       }
 
       HStack(spacing: 3) {
         Text("FirstCopyTime", tableName: "PreviewItemView")
+          .foregroundStyle(CopyraTheme.Colors.textMuted)
         Text(item.item.firstCopiedAt, style: .date)
+          .foregroundStyle(CopyraTheme.Colors.textSecondary)
         Text(item.item.firstCopiedAt, style: .time)
+          .foregroundStyle(CopyraTheme.Colors.textSecondary)
       }
 
       HStack(spacing: 3) {
         Text("LastCopyTime", tableName: "PreviewItemView")
+          .foregroundStyle(CopyraTheme.Colors.textMuted)
         Text(item.item.lastCopiedAt, style: .date)
+          .foregroundStyle(CopyraTheme.Colors.textSecondary)
         Text(item.item.lastCopiedAt, style: .time)
+          .foregroundStyle(CopyraTheme.Colors.textSecondary)
       }
 
       HStack(spacing: 3) {
         Text("NumberOfCopies", tableName: "PreviewItemView")
+          .foregroundStyle(CopyraTheme.Colors.textMuted)
         Text(String(item.item.numberOfCopies))
+          .foregroundStyle(CopyraTheme.Colors.textSecondary)
       }
     }
+    .font(CopyraTheme.Typography.metadata)
     .controlSize(.small)
   }
 }

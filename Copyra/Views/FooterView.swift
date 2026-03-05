@@ -20,7 +20,7 @@ struct FooterView: View {
 
   var body: some View {
     VStack(spacing: 0) {
-      Divider()
+      ThemedDivider()
         .padding(.horizontal, Popup.horizontalSeparatorPadding)
         .padding(.bottom, Popup.verticalSeparatorPadding)
 
