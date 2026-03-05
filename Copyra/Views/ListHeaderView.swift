@@ -15,7 +15,8 @@ struct ListHeaderView: View {
     HStack {
       if showTitle {
         Text("Copyra")
-          .foregroundStyle(.secondary)
+          .font(CopyraTheme.Typography.title)
+          .foregroundStyle(CopyraTheme.Colors.textMuted)
           .padding(.leading, 5)
       }
 

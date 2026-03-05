@@ -60,6 +60,7 @@ struct ContentView: View {
       }
     }
     .animation(.easeInOut(duration: 0.2), value: appState.searchVisible)
+    .preferredColorScheme(.dark)
     .environment(appState)
     .environment(modifierFlags)
     .environment(\.scenePhase, scenePhase)

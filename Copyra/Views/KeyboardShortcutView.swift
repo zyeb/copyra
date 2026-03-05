@@ -22,8 +22,10 @@ struct KeyboardShortcutView: View {
       }
       Text(character).frame(width: 12, alignment: .center)
     }
+    .font(CopyraTheme.Typography.shortcut)
     .lineLimit(1)
-    .opacity(character.isEmpty ? 0 : 0.7)
+    .foregroundStyle(CopyraTheme.Colors.textMuted)
+    .opacity(character.isEmpty ? 0 : 1)
   }
 }
 

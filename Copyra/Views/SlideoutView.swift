@@ -48,7 +48,7 @@ where Content: View, Slideout: View {
 
   @ViewBuilder
   private func resizeDivider() -> some View {
-    Divider()
+    ThemedDivider()
       .padding(.vertical)
       .padding(.horizontal, Popup.horizontalPadding)
       // macOS 26 broke gestures if no background is present.

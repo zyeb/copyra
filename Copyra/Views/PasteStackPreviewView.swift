@@ -38,7 +38,7 @@ struct PasteStackPreviewView: View {
       .readHeight($pasteStackListHeight)
     }
     .frame(maxHeight: pasteStackListHeight)
-    .background(.fill.tertiary)
+    .background(CopyraTheme.Colors.surfaceCard)
     .clipShape(SelectionAppearance.none.rect(cornerRadius: Popup.cornerRadius))
     Spacer()
   }

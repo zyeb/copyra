@@ -145,6 +145,7 @@
 		DAFE2DDA268A521B00990986 /* String+Shortened.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE2DD9268A521A00990986 /* String+Shortened.swift */; };
 		DAFE2DE9268A9B1B00990986 /* HistoryItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFE2DE8268A9B1B00990986 /* HistoryItemTests.swift */; };
 		DAFEF0B8249D7DEE006029E8 /* KeyboardShortcuts.Name+Shortcuts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFEF0B7249D7DEE006029E8 /* KeyboardShortcuts.Name+Shortcuts.swift */; };
+		AA00AA012F3B000100AAAAAA /* CopyraTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA00AA022F3B000100AAAAAA /* CopyraTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +183,7 @@
 		0ABDD5112BB47F1E0054963B /* NSWorkspace+ApplicationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSWorkspace+ApplicationName.swift"; sourceTree = "<group>"; };
 		1180C7372826B6140086870C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		11EB892C281DADFF00A78CB4 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AA00AA022F3B000100AAAAAA /* CopyraTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyraTheme.swift; sourceTree = "<group>"; };
 		2F0EC7782E7727E3003E2EA9 /* HeightReaderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightReaderModifier.swift; sourceTree = "<group>"; };
 		2F0EC77A2E772899003E2EA9 /* PinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinsView.swift; sourceTree = "<group>"; };
 		2F0EC77C2E773314003E2EA9 /* Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selection.swift; sourceTree = "<group>"; };
@@ -810,6 +812,7 @@
 				DA3BCB902C3EEC1000B01BC1 /* Observables */,
 				DA181178247D150B00066D55 /* Settings */,
 				DA21AD3C249E85BD003E7C98 /* Sounds */,
+				AA00AA032F3B000100AAAAAA /* Theme */,
 				DA19690C2C3EEF9300258481 /* Views */,
 				DAAEB195219694AE00A7883C /* About.swift */,
 				DA6D98E12AEABE03008A77CE /* Accessibility.swift */,
@@ -844,6 +847,14 @@
 				4762D6992467226100B3A2BA /* Localizable.strings */,
 			);
 			path = Copyra;
+			sourceTree = "<group>";
+		};
+		AA00AA032F3B000100AAAAAA /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				AA00AA022F3B000100AAAAAA /* CopyraTheme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1176,6 +1187,7 @@
 				DA7A753E26A52F0F00DC16EF /* NSImage+Names.swift in Sources */,
 				2F0EC7852E774083003E2EA9 /* PasteStackView.swift in Sources */,
 				DA20FA782B082E1A00056DD5 /* NSSound+Named.swift in Sources */,
+				AA00AA012F3B000100AAAAAA /* CopyraTheme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
