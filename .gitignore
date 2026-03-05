@@ -1,0 +1,9 @@
+xcuserdata/
+Copyra.xcodeproj/project.xcworkspace/xcshareddata
+.idea
+.DS_Store
+Copyra/.DS_Store
+.build/
+build/
+build-test/
+build-test-*/
